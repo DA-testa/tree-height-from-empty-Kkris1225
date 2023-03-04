@@ -25,6 +25,7 @@ def compute_height(n, parents):
 
 
 def main():
+    try:
     input_type = input()
     
     if "I" in input_type:
@@ -41,10 +42,10 @@ def main():
                     with open(f"test/{filename}", "r", encoding="utf-8") as f:
                         n = int(f.readline())
                         parents = list(map(int, f.readline().split()))
-                        
-                except FileNotFoundError:
-                    print(f"File {filename}.txt not found.")
-                    return        
+                       
+    except FileNotFoundError:
+        print(f"File {filename}.txt not found.")
+        return        
     
     else:
         print("Invalid input type.")

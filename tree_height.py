@@ -37,9 +37,14 @@ def main():
             if "a" in filename:
                 print("Invalid file name. File name cannot contain the letter 'a'.")
             else:
-                with open(f"test/{filename}", "r", encoding="utf-8") as f:
-                    n = int(f.readline())
-                    parents = list(map(int, f.readline().split()))
+                try:
+                    with open(f"test/{filename}", "r", encoding="utf-8") as f:
+                        n = int(f.readline())
+                        parents = list(map(int, f.readline().split()))
+                        
+                except FileNotFoundError:
+                    print(f"File {filename}.txt not found.")
+                    return        
     
     else:
         print("Invalid input type.")

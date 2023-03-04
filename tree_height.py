@@ -27,27 +27,27 @@ def compute_height(n, parents):
 def main():
     input_type = input()
     
-        if "I" in input_type:
-            n = int(input())
-            parents = list(map(int, input().split()))
+    if "I" in input_type:
+        n = int(input())
+        parents = list(map(int, input().split()))
         
-        elif "F" in input_type:
-            while True:
-                filename = input()
-                path='./test/'+filename
+    elif "F" in input_type:
+        while True:
+            filename = input()
+            path='./test/'+filename
                 
-                if "a" in filename
-                         print("Invalid file name. File name cannot contain the letter 'a'.")
-                else:
-                    try:
-                        with open(f"test/{filename}", "r", encoding="utf-8") as f:
-                            n = int(f.readline())
-                            parents = list(map(int, f.readline().split()))
+            if "a" in filename
+                print("Invalid file name. File name cannot contain the letter 'a'.")
+            else:
+                try:
+                    with open(f"test/{filename}", "r", encoding="utf-8") as f:
+                        n = int(f.readline())
+                        parents = list(map(int, f.readline().split()))
                             
-                    except Exception as e:
+                except Exception as e:
 
-                        print("Error:",str(e))
-                        return
+                    print("Error:",str(e))
+                    return
         else:
            print("Invalid input type.")
            return

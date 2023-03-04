@@ -32,7 +32,7 @@ def main():
         parents = list(map(int, input().split()))
         
     elif "F" in input_type:
-        while True:
+        
             filename = input()
             if "a" in filename:
                 print("Invalid file name. File name cannot contain the letter 'a'.")

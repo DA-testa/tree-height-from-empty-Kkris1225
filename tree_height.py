@@ -28,17 +28,16 @@ def main():
     try:
         input_type = input()
     
-    if "I" in input_type:
-        n = int(input())
-        parents = list(map(int, input().split()))
+        if "I" in input_type:
+            n = int(input())
+            parents = list(map(int, input().split()))
         
-    elif "F" in input_type:
-        while True:
-            filename = input()
-            if "a" in filename:
-                print("Invalid file name. File name cannot contain the letter 'a'.")
-            else:
-                try:
+        elif "F" in input_type:
+            while True:
+                filename = input()
+                if "a" in filename:
+                    print("Invalid file name. File name cannot contain the letter 'a'.")
+                else:
                     with open(f"test/{filename}", "r", encoding="utf-8") as f:
                         n = int(f.readline())
                         parents = list(map(int, f.readline().split()))

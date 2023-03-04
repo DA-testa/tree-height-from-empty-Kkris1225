@@ -36,18 +36,18 @@ def main():
         filename = input()
         path='./test/'+filename
                 
-            if "a" in filename:
-                print("Invalid file name. File name cannot contain the letter 'a'.")
-            else:
-                try:
-                    with open(path) as f: #f"test/{filename}", "r", encoding="utf-8"
-                        n = int(f.readline())
-                        parents = list(map(int, f.readline().split()))
+        if "a" in filename:
+            print("Invalid file name. File name cannot contain the letter 'a'.")
+        else:
+            try:
+                with open(path) as f: #f"test/{filename}", "r", encoding="utf-8"
+                    n = int(f.readline())
+                    parents = list(map(int, f.readline().split()))
                             
-                except Exception as e:
+            except Exception as e:
 
-                    print("Error:",str(e))
-                    return
+                print("Error:",str(e))
+                return
     else:
         print("Invalid input type.")
         return

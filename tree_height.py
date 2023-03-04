@@ -36,7 +36,7 @@ def main():
             filename = input()
             path='./test/'+filename
                 
-            if "a" in filename
+            if "a" in filename:
                 print("Invalid file name. File name cannot contain the letter 'a'.")
             else:
                 try:

@@ -40,7 +40,7 @@ def main():
                 print("Invalid file name. File name cannot contain the letter 'a'.")
             else:
                 try:
-                    with open(f"test/{filename}", "r", encoding="utf-8") as f:
+                    with open(path) as f: #f"test/{filename}", "r", encoding="utf-8"
                         n = int(f.readline())
                         parents = list(map(int, f.readline().split()))
                             

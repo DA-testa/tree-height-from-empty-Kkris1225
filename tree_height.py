@@ -48,9 +48,9 @@ def main():
 
                     print("Error:",str(e))
                     return
-        else:
-           print("Invalid input type.")
-           return
+    else:
+        print("Invalid input type.")
+        return
     
     print(compute_height(n, parents))
 

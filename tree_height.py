@@ -26,7 +26,7 @@ def compute_height(n, parents):
 
 def main():
     try:
-    input_type = input()
+        input_type = input()
     
     if "I" in input_type:
         n = int(input())

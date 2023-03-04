@@ -46,9 +46,9 @@ def main():
         print(f"File {filename}.txt not found.")
         return        
     
-    else:
-        print("Invalid input type.")
-        return
+        else:
+           print("Invalid input type.")
+           return
     
     print(compute_height(n, parents))
 
